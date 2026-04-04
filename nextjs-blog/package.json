@@ -8,9 +8,9 @@
   "dependencies": {
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
+    "next": "^16.2.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "remark": "^14.0.2",
     "remark-html": "^15.0.1"
   },
