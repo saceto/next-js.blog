@@ -6,10 +6,52 @@ import homeStyles from '../styles/home.module.css';
 import { getSortedPostsData } from '../lib/posts-json'; // your JSON-based data
 import Link from 'next/link';
 
+const developerPortals = [
+  {
+    name: 'NVIDIA',
+    href: 'https://developer.nvidia.com/',
+    cardClass: homeStyles.devCardNvidia,
+  },
+  {
+    name: 'Google',
+    href: 'https://developers.google.com/',
+    cardClass: homeStyles.devCardGoogle,
+  },
+  {
+    name: 'Apple',
+    href: 'https://developer.apple.com/',
+    cardClass: homeStyles.devCardApple,
+  },
+  {
+    name: 'Microsoft',
+    href: 'https://developer.microsoft.com/',
+    cardClass: homeStyles.devCardMicrosoft,
+  },
+];
+
+const developerSidebar = (
+  <div className={homeStyles.devSidebar}>
+    <h2 className={homeStyles.devSidebarTitle}>Developer portals</h2>
+    <div className={homeStyles.devGrid}>
+      {developerPortals.map(({ name, href, cardClass }) => (
+        <a
+          key={name}
+          href={href}
+          className={`${homeStyles.devCard} ${cardClass}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {name}
+        </a>
+      ))}
+    </div>
+  </div>
+);
+
 export default function Home({ allPostsData }) {
   return (
     <div className={homeStyles.wrapper}>
-      <Layout home>
+      <Layout home sidebar={developerSidebar}>
         <Head>
           <title>{siteTitle}</title>
         </Head>

@@ -7,9 +7,11 @@ import Link from 'next/link';
 const name = '[Сундар Пичаи]';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, sidebar }) {
+  const containerClass = sidebar ? styles.containerWithSidebar : styles.container;
+
   return (
-    <div className={styles.container}>
+    <div className={containerClass}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -58,7 +60,16 @@ export default function Layout({ children, home }) {
           </>
         )}
       </header>
-      <main>{children}</main>
+      {sidebar ? (
+        <div className={styles.contentRow}>
+          <main className={styles.mainWithSidebar}>{children}</main>
+          <aside className={styles.sidebarAside} aria-label="Developer portals">
+            {sidebar}
+          </aside>
+        </div>
+      ) : (
+        <main>{children}</main>
+      )}
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">← Back to home</Link>

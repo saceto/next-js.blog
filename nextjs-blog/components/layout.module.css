@@ -4,6 +4,39 @@
   margin: 3rem auto 6rem;
 }
 
+.containerWithSidebar {
+  max-width: 52rem;
+  padding: 0 1rem;
+  margin: 3rem auto 6rem;
+}
+
+.contentRow {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.mainWithSidebar {
+  flex: 1;
+  min-width: 0;
+}
+
+.sidebarAside {
+  flex: 0 0 13.75rem;
+}
+
+@media (max-width: 720px) {
+  .contentRow {
+    flex-direction: column;
+  }
+
+  .sidebarAside {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+}
+
 .header {
   display: flex;
   flex-direction: column;
