@@ -23,6 +23,11 @@ export default function Home({ allPostsData }) {
               Top computer companies (revenue &amp; links)
             </Link>
           </p>
+          <p>
+            <Link href="/ultima-online" style={{ fontSize: 'x-large' }}>
+              ULTIMA ON LINE
+            </Link>
+          </p>
           <p>Здравствуйте. Меня зовут Сундар Пичаи. Я веб-разработчик из Санта-Розы, Калифорния.</p>
           <p>
             (Пичаи перешёл в Google в 2004 году, где он возглавлял направления менеджмента и
