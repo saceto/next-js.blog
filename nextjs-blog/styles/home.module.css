@@ -1,0 +1,34 @@
+.wrapper {
+  min-height: 100vh;
+  padding: 1rem;
+  background: #0d0d0d;
+  color: #e8e6e6;
+}
+
+.wrapper :global(a) {
+  color: #e63946;
+  text-decoration: none;
+}
+
+.wrapper :global(a:hover) {
+  color: #ff5c6a;
+  text-decoration: underline;
+}
+
+.wrapper :global(h1),
+.wrapper :global(h2) {
+  color: #ff2d3d;
+}
+
+.wrapper :global(h2) {
+  border-bottom: 1px solid #3d1518;
+  padding-bottom: 0.35rem;
+}
+
+.wrapper :global(small) {
+  color: #9a5c62;
+}
+
+.wrapper :global(img) {
+  box-shadow: 0 0 0 3px #2a0a0c;
+}

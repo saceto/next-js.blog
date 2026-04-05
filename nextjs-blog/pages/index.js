@@ -2,12 +2,13 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
+import homeStyles from '../styles/home.module.css';
 import { getSortedPostsData } from '../lib/posts-json'; // your JSON-based data
 import Link from 'next/link';
 
 export default function Home({ allPostsData }) {
   return (
-    <div style={{ backgroundColor: 'green', minHeight: '100vh', padding: '1rem' }}>
+    <div className={homeStyles.wrapper}>
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
