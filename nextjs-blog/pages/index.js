@@ -17,6 +17,11 @@ export default function Home({ allPostsData }) {
         <section className={utilStyles.headingMd}>
           <p>Sundar Pichai</p>
           <p>Sundar Pichai</p>
+          <p>
+            <Link href="/tech-companies" style={{ fontSize: 'x-large' }}>
+              Top computer companies (revenue &amp; links)
+            </Link>
+          </p>
           <p>Здравствуйте. Меня зовут Сундар Пичаи. Я веб-разработчик из Санта-Розы, Калифорния.</p>
           <p>
             (Пичаи перешёл в Google в 2004 году, где он возглавлял направления менеджмента и
