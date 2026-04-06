@@ -6,6 +6,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
     "next": "^16.2.2",
@@ -16,5 +17,8 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "vercel": "^50.40.0"
   }
 }
