@@ -1,3 +1,39 @@
+.topNavGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.5rem;
+  width: 100%;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.topNavLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55rem 0.85rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  color: #0070f3;
+  background: rgba(0, 112, 243, 0.08);
+  border: 1px solid rgba(0, 112, 243, 0.25);
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.topNavLink:hover {
+  background: rgba(0, 112, 243, 0.14);
+  border-color: rgba(0, 112, 243, 0.45);
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
 .container {
   max-width: 36rem;
   padding: 0 1rem;

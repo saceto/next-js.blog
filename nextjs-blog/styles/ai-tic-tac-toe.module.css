@@ -1,0 +1,178 @@
+/* Deep Night Blue — from provided HTML */
+
+.page {
+  --x-color: #ffffff;
+  --o-color: #f1c40f;
+  --bg-page: #101820;
+  --bg-cell: #1a253a;
+  --border-cell: #34495e;
+  --accent-btn: #3498db;
+  --text-main: #ecf0f1;
+  --text-status: #bdc3c7;
+
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-page);
+  color: var(--text-main);
+  padding: 20px;
+  margin: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.topNav {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gobackLink,
+.resetBtn {
+  text-decoration: none;
+  color: white;
+  background: var(--accent-btn);
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.resetBtn {
+  background: #2f3542;
+  box-shadow: 0 4px 15px rgba(47, 53, 66, 0.3);
+}
+
+.gobackLink:hover,
+.resetBtn:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.status {
+  margin: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-height: 50px;
+  text-align: center;
+  max-width: 320px;
+  color: var(--text-main);
+}
+
+.status :global(small) {
+  font-size: 0.8rem;
+  color: var(--text-status);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: var(--bg-cell);
+  border: 2px solid var(--border-cell);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.cellHover:not(.taken):not(.gameOver):hover {
+  background: #233454;
+  border-color: var(--accent-btn);
+}
+
+.cell.taken {
+  cursor: default;
+}
+
+.cell.gameOver {
+  cursor: pointer;
+  pointer-events: auto;
+  border-color: #2ed573;
+  background: #143122;
+}
+
+.aiName {
+  position: absolute;
+  bottom: 5px;
+  font-size: 0.6rem;
+  color: rgba(236, 240, 241, 0.5);
+}
+
+.mark {
+  line-height: 1;
+}
+
+.markX {
+  color: var(--x-color);
+}
+
+.markO {
+  color: var(--o-color);
+}
+
+.commentSection {
+  margin-top: 40px;
+  width: 100%;
+  max-width: 340px;
+  border-top: 2px solid var(--border-cell);
+  padding-top: 20px;
+}
+
+.formControl {
+  width: 100%;
+  height: 80px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-cell);
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: var(--text-main);
+  font-family: sans-serif;
+}
+
+.formControl::placeholder {
+  color: rgba(236, 240, 241, 0.4);
+}
+
+.formControl:focus {
+  outline: none;
+  border-color: var(--accent-btn);
+}
+
+.btnSuccess {
+  width: 100%;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.btnSuccess:hover {
+  background-color: #2ecc71;
+}

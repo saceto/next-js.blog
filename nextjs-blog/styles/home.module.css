@@ -130,3 +130,20 @@
   border-bottom-color: #e63946;
   background: linear-gradient(180deg, #221418 0%, #120c0e 100%);
 }
+
+/* Top site nav — must follow general .wrapper a rules */
+.wrapper :global(nav[aria-label='Site']) {
+  border-bottom-color: #3d1518;
+}
+
+.wrapper :global(nav[aria-label='Site'] a) {
+  color: #e8e6e6;
+  background: rgba(230, 57, 70, 0.12);
+  border: 1px solid #3d1518;
+}
+
+.wrapper :global(nav[aria-label='Site'] a:hover) {
+  color: #ff5c6a;
+  background: rgba(230, 57, 70, 0.2);
+  border-color: #e63946;
+}

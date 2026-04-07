@@ -27,6 +27,14 @@ export default function Layout({ children, home, sidebar }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
+      <nav className={styles.topNavGrid} aria-label="Site">
+        <Link href="/" className={styles.topNavLink}>
+          Home
+        </Link>
+        <Link href="/ai-tic-tac-toe" className={styles.topNavLink}>
+          AITICTACTOE
+        </Link>
+      </nav>
       <header className={styles.header}>
         {home ? (
           <>
